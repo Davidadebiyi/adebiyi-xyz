@@ -12,7 +12,7 @@ const Footer = () => (
   >
     <div className="container">
       <p>
-        A GatsbyJS Starter for Netlify CMS, Made/Deployed with{" "}
+        Made with{" "} by David Adebiyi. Copyright &copy; 2021
         <span className="icon -love">
           <RiHeart2Line />
         </span>{" "}
