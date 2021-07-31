@@ -1,5 +1,5 @@
 ---
-template: about-page
+template: bio-page
 slug: /bio
 title: Bio.
 ---

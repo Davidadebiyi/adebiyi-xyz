@@ -89,17 +89,17 @@ collections:
               - name: "ctaLink"
                 label: "CTA Link"
                 widget: "string"
-      - label: "About"
-        name: "about"
-        file: "src/content/pages/about.md"
+      - label: "Bio"
+        name: "bio"
+        file: "src/content/pages/bio.md"
         fields:
           - {
               label: "Template",
               name: "template",
               widget: "hidden",
-              default: "about-page",
+              default: "bio-page",
             }
-          - { label: "Slug", name: "slug", widget: "hidden", default: "/about" }
+          - { label: "Slug", name: "slug", widget: "hidden", default: "/bio" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contact"
