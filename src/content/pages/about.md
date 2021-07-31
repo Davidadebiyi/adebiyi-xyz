@@ -1,7 +1,7 @@
 ---
 template: about-page
-slug: /about
-title: About David Adebiyi
+slug: /bio
+title: Bio.
 ---
 
 Creating is the most human behaviour. We are here to create.
