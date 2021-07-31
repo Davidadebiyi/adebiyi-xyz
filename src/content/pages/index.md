@@ -6,7 +6,7 @@ tagline: Multi-Stack Engineer
 featuredImage: /assets/dave.jpg
 cta:
   ctaText: Know more
-  ctaLink: /bio
+  ctaLink: ../bio
 ---
 
 A forward/reverse engineer, based in Lagos. Building Hankali Labs.
