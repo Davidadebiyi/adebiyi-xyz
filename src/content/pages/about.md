@@ -1,7 +1,7 @@
 ---
 template: about-page
 slug: /about
-title: About Foundation
+title: About David Adebiyi
 ---
 
 Creating is the most human behaviour. We are here to create.

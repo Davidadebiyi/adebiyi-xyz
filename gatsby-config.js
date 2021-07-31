@@ -98,8 +98,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Foundation`,
-        short_name: `Foundation`,
+        name: `Adebiyi`,
+        short_name: `Adebiyi`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
