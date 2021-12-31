@@ -1,7 +1,7 @@
 ---
 template: blog-post
 title: MMXXII
-slug: /typography
+slug: /new-year
 date: 2022-01-01 00:30
 description: A new year plan
 featuredImage: /assets/alexander-andrews-zw07kvdahpw-unsplash.jpg
