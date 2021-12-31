@@ -1,6 +1,6 @@
 ---
 template: blog-post
-title: Typography
+title: MMXXII
 slug: /typography
 date: 2022-01-01 00:30
 description: A new year plan
