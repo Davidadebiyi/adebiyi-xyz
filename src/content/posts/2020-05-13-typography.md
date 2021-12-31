@@ -8,7 +8,7 @@ featuredImage: /assets/alexander-andrews-zw07kvdahpw-unsplash.jpg
 ---
 **2022**
 
-Go hard or go home! Mediocrity is not an option.
+Go hard or go home! Mediocrity is not an option, so we go hard!
 
 Winners ship, losers give excuses.
 
