@@ -2,11 +2,11 @@
   "meta": {
     "title": "Adebiyi",
     "titleTemplate": "%s",
-    "description": "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
-    "siteUrl": "https://foundation.stackrole.com",
+    "description": "My personal website/blog",
+    "siteUrl": "https://adebiyi.xyz",
     "image": "/assets/stackrole.png",
     "iconimage": "/assets/stackrole.png",
-    "twitterUsername": "@sdavid_biyi"
+    "twitterUsername": "@david_biyi"
   },
   "ga": "UA-XXXXXXXXX-X"
 }
