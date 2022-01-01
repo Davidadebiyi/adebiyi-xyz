@@ -8,5 +8,4 @@ cta:
   ctaText: Know more
   ctaLink: ../bio
 ---
-
-A forward/reverse engineer, based in Lagos. Building Hankali Labs.
+A Forward/Reverse Engineer. Building Hankali AI.
