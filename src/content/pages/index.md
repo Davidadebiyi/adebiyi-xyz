@@ -8,4 +8,4 @@ cta:
   ctaText: Know more
   ctaLink: ../bio
 ---
-A Forward/Reverse Engineer. Refactory Electricity at PowerLabs.
+A Forward/Reverse Engineer. Refactoring Electricity at PowerLabs.
