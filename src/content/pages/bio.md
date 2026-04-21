@@ -4,9 +4,9 @@ label: Profile
 quote: Creating is the most human behaviour. We are here to create.
 metadata:
   - label: Discipline
-    value: Engineering
+    value: Engineering · Science · Management
   - label: Domain
-    value: ML · Embedded Systems
+    value: ML · Embedded Systems · Product
   - label: Location
     value: Lagos, NG
   - label: Status
