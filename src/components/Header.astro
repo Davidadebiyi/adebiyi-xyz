@@ -1,0 +1,62 @@
+---
+const { pathname = "/" } = Astro.props
+
+const primaryLinks = [
+  { href: "/labs", label: "Labs" },
+  { href: "/studio", label: "Studio" },
+  { href: "/workshop", label: "Workshop" },
+]
+
+const secondaryLinks = [
+  { href: "/essays", label: "Essays" },
+  { href: "/index", label: "Index" },
+  { href: "/bio", label: "Bio" },
+]
+
+const isActive = href =>
+  href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`)
+---
+
+<header class="site-header">
+  <nav class="foundry-nav" aria-label="Primary navigation">
+    <a href="/" class="foundry-nav__wordmark">Adebiyi</a>
+
+    <div class="foundry-nav__group foundry-nav__group--primary">
+      {
+        primaryLinks.map(link => (
+          <a
+            href={link.href}
+            class={`foundry-nav__link${isActive(link.href) ? " is-active" : ""}`}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="foundry-nav__divider" aria-hidden="true"></div>
+
+    <div class="foundry-nav__group foundry-nav__group--secondary">
+      {
+        secondaryLinks.map(link => (
+          <a
+            href={link.href}
+            class={`foundry-nav__link${isActive(link.href) ? " is-active" : ""}`}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="foundry-nav__actions">
+      <a
+        href="/contact"
+        class={`foundry-nav__contact${isActive("/contact") ? " is-active" : ""}`}
+      >
+        Contact
+      </a>
+      <button class="theme-toggle" type="button" data-theme-toggle>Light</button>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,40 @@
+{
+  "title": "Workshop",
+  "navTitle": "Workshop",
+  "tagline": "Making · Prototypes · Fabrication · Tools",
+  "description": "Build logs, prototype records, material notes, and engineering process documentation.",
+  "items": [
+    {
+      "id": "Build. 04",
+      "type": "Build log",
+      "title": "Mechanical keyboard - ISO layout",
+      "summary": "Custom 65% build with brass weight, hand-lubed switches, gasket mount. Rev 02 addresses flex.",
+      "tags": ["Build", "Hardware"],
+      "date": "2026-04-18"
+    },
+    {
+      "id": "Build. 02",
+      "type": "Prototype",
+      "title": "Terminal dashboard - system monitor",
+      "summary": "Mono-only interface displaying CPU, memory, disk, and process state. Operational aesthetics.",
+      "tags": ["Terminal", "Software"],
+      "date": "2026-03-05"
+    },
+    {
+      "id": "Build. 06",
+      "type": "Build log",
+      "title": "PowerLabs - battery management prototype",
+      "summary": "Rev 03 BMS board. Balancing circuit redesign, thermal characterisation under Nigerian grid conditions.",
+      "tags": ["PowerLabs", "Electronics"],
+      "date": "2026-02-14"
+    },
+    {
+      "id": "Note. 11",
+      "type": "Workshop note",
+      "title": "Material selection principles",
+      "summary": "Rules for choosing material when the process is visible: aluminium, brass, PCB, felt as design objects.",
+      "tags": ["Materials", "Process"],
+      "date": "2026-01-22"
+    }
+  ]
+}

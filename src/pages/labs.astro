@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro"
+import ArtifactGrid from "../components/ArtifactGrid.astro"
+import MetadataBar from "../components/MetadataBar.astro"
+import PageHeader from "../components/PageHeader.astro"
+import { modePages } from "../util/foundry-data"
+
+const mode = modePages.labs
+---
+
+<Layout title="Labs" description="Research notes, system diagrams, ML artifacts, and embedded systems records.">
+  <div class="mode-page">
+    <PageHeader label={mode.tagline} title={mode.title} description={mode.description} />
+    <MetadataBar
+      items={[
+        { label: "Mode", value: mode.title },
+        { label: "Artifacts", value: mode.items.length },
+        { label: "Status", value: "Active" },
+        { label: "Rev", value: "02" },
+      ]}
+    />
+    <ArtifactGrid items={mode.items} />
+  </div>
+</Layout>

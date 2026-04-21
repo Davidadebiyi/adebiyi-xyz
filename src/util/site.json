@@ -2,9 +2,9 @@
   "meta": {
     "title": "Adebiyi",
     "titleTemplate": "%s",
-    "description": "My personal website/blog",
+    "description": "Forward/Reverse Engineer. Building Hankali AI.",
     "siteUrl": "https://adebiyi.xyz",
-    "image": "/assets/stackrole.png",
+    "image": "/assets/dave.jpg",
     "iconimage": "/assets/stackrole.png",
     "twitterUsername": "@david_biyi"
   },

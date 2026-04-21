@@ -1,0 +1,9 @@
+---
+const { label, title, description } = Astro.props
+---
+
+<header class="foundry-page-header">
+  <div class="meta-text"><slot name="label">{label}</slot></div>
+  <h1>{title}</h1>
+  {description && <p>{description}</p>}
+</header>

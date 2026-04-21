@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro"
+import TagList from "../components/TagList.astro"
+import { formatPostDate, getEssayMeta, sortPostsByDate } from "../util/foundry-data"
+
+export async function getStaticPaths() {
+  const postModules = import.meta.glob("../content/posts/*.md", { eager: true })
+  const posts = sortPostsByDate(Object.values(postModules))
+
+  return posts.map((post, index) => ({
+    params: { slug: post.frontmatter.slug.replace(/^\//, "") },
+    props: {
+      post,
+      previous: posts[index + 1],
+      next: posts[index - 1],
+    },
+  }))
+}
+
+const { post, previous, next } = Astro.props
+const { Content } = post
+const meta = getEssayMeta(post.frontmatter)
+const date = formatPostDate(post.frontmatter.date)
+---
+
+<Layout
+  title={meta.title}
+  description={meta.summary || post.frontmatter.description}
+  image={post.frontmatter.featuredImage}
+  article
+>
+  <article class="blog-post">
+    <header class="blog-post__header">
+      <div class="meta-text">
+        <time datetime={post.frontmatter.date.toISOString?.() || post.frontmatter.date}>
+          {date}
+        </time>
+      </div>
+      <h1>{meta.title}</h1>
+      <p>{meta.summary || post.frontmatter.description}</p>
+      <TagList tags={meta.tags} />
+    </header>
+
+    <img
+      class="blog-post__image"
+      src={post.frontmatter.featuredImage}
+      alt={`${meta.title} - Featured image`}
+    />
+
+    <div class="blog-post__content">
+      <Content />
+    </div>
+  </article>
+
+  {(previous || next) && (
+    <nav class="post-pagination" aria-label="Essay navigation">
+      {previous && (
+        <a href={previous.frontmatter.slug} rel="prev">
+          <span>&lt;- Previous</span>
+          {getEssayMeta(previous.frontmatter).title}
+        </a>
+      )}
+      {next && (
+        <a href={next.frontmatter.slug} rel="next">
+          <span>Next -&gt;</span>
+          {getEssayMeta(next.frontmatter).title}
+        </a>
+      )}
+    </nav>
+  )}
+</Layout>

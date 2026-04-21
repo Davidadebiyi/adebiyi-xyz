@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import PageHeader from "../../components/PageHeader.astro"
+import TagList from "../../components/TagList.astro"
+import { getArchiveArtifacts, sortPostsByDate } from "../../util/foundry-data"
+
+const postModules = import.meta.glob("../../content/posts/*.md", { eager: true })
+const posts = sortPostsByDate(Object.values(postModules))
+const artifacts = getArchiveArtifacts(posts)
+const filters = ["All", "Labs", "Studio", "Workshop", "Essays"]
+---
+
+<Layout title="Index" description="All Adebiyi artifacts, navigable by mode.">
+  <div class="archive-page">
+    <PageHeader
+      label="Taxonomy · Archive"
+      title="Index"
+      description="All artifacts, navigable by mode."
+    />
+
+    <div class="filter-tabs" aria-label="Archive filters">
+      {filters.map(filter => (
+        <button
+          class={filter === "All" ? "is-active" : ""}
+          type="button"
+          data-archive-filter={filter}
+        >
+          {filter}
+        </button>
+      ))}
+    </div>
+
+    <div class="archive-table-wrap">
+      <table class="archive-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Mode</th>
+            <th>Date</th>
+            <th>Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            artifacts.map(item => (
+              <tr data-archive-row data-mode={item.mode}>
+                <td>{item.id}</td>
+                <td><a href={item.href}>{item.title}</a></td>
+                <td>{item.mode}</td>
+                <td>{item.date}</td>
+                <td><TagList tags={item.tags.slice(0, 2)} /></td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const filterButtons = document.querySelectorAll("[data-archive-filter]")
+    const rows = document.querySelectorAll("[data-archive-row]")
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-archive-filter")
+
+        filterButtons.forEach(item => item.classList.remove("is-active"))
+        button.classList.add("is-active")
+
+        rows.forEach(row => {
+          const mode = row.getAttribute("data-mode")
+          row.hidden = filter !== "All" && mode !== filter
+        })
+      })
+    })
+  </script>
+</Layout>

@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro"
+import EssayGrid from "../components/EssayGrid.astro"
+import MetadataBar from "../components/MetadataBar.astro"
+import { sortPostsByDate } from "../util/foundry-data"
+
+const pageModules = import.meta.glob("../content/pages/index.md", { eager: true })
+const page = Object.values(pageModules)[0]
+const home = page.frontmatter
+const postModules = import.meta.glob("../content/posts/*.md", { eager: true })
+const allPosts = sortPostsByDate(Object.values(postModules))
+const recentPosts = allPosts.slice(0, 2)
+---
+
+<Layout title={home.title} description={home.subtitle}>
+  <section class="home-hero">
+    <div class="home-hero__copy">
+      <div class="meta-text meta-text--accent">{home.eyebrow}</div>
+      <h1>{home.title}</h1>
+      <h2>{home.subtitle}</h2>
+      <p>
+        {home.description}
+      </p>
+      <div class="home-hero__actions">
+        <a href={home.primaryCta.url} class="foundry-button">{home.primaryCta.label}</a>
+        <a href={home.secondaryCta.url} class="foundry-button foundry-button--primary">
+          {home.secondaryCta.label}
+        </a>
+      </div>
+    </div>
+
+    <figure class="home-portrait">
+      <img src={home.portraitImage} alt={home.title} />
+      <figcaption>{home.portraitCaption}</figcaption>
+    </figure>
+  </section>
+
+  <MetadataBar boxed items={home.metadata} />
+
+  <section class="mode-triptych" aria-label="Operating modes">
+    {
+      home.modes.map(card => (
+        <a class="mode-triptych__card" href={card.url}>
+          <span>{card.id}</span>
+          <h2>{card.title}</h2>
+          <p>{card.description}</p>
+          <strong>Enter -&gt;</strong>
+        </a>
+      ))
+    }
+  </section>
+
+  <section class="home-essays">
+    <header class="section-header">
+      <h2>Recent essays</h2>
+      <span>{recentPosts.length} posts</span>
+    </header>
+    <EssayGrid posts={recentPosts} compact />
+    <div class="section-link-row">
+      <a href="/essays">See all essays -&gt;</a>
+    </div>
+  </section>
+</Layout>

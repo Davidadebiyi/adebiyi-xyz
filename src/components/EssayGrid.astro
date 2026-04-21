@@ -1,0 +1,38 @@
+---
+import TagList from "./TagList.astro"
+import { formatPostDate, getEssayMeta } from "../util/foundry-data"
+
+const { posts = [], compact = false } = Astro.props
+---
+
+<div class={`essay-grid${compact ? " essay-grid--compact" : ""}`}>
+  {
+    posts.map(post => {
+      const meta = getEssayMeta(post.frontmatter)
+      const date = formatPostDate(post.frontmatter.date)
+
+      return (
+        <article class={`essay-card${compact ? " essay-card--compact" : ""}`}>
+          <a href={post.frontmatter.slug} class="essay-card__image-link">
+            <img
+              class="essay-card__image"
+              src={post.frontmatter.featuredImage}
+              alt={`${meta.title} - Featured image`}
+              loading="lazy"
+            />
+          </a>
+          <div class="essay-card__content">
+            <div class="meta-text">
+              <time datetime={post.frontmatter.date.toISOString?.() || post.frontmatter.date}>
+                {date}
+              </time>
+            </div>
+            <h2><a href={post.frontmatter.slug}>{meta.title}</a></h2>
+            <p>{meta.summary}</p>
+            {!compact && <TagList tags={meta.tags} />}
+          </div>
+        </article>
+      )
+    })
+  }
+</div>

@@ -1,58 +1,29 @@
 {
-  "name": "@stackrole/gatsby-starter-foundation",
-  "description": "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
-  "version": "2.0.0",
-  "author": "Stackrole <stackrole@gmail.com>",
+  "name": "adebiyi-xyz",
+  "description": "Foundry v2 personal site for David Adebiyi.",
+  "version": "3.0.0",
+  "author": "David Adebiyi",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stackrole/gatsby-starter-foundation.git"
-  },
-  "bugs": {
-    "url": "https://github.com/stackrole/gatsby-starter-foundation/issues"
-  },
   "engines": {
-    "node": "20.x"
+    "node": ">=20"
   },
-  "packageManager": "npm@10",
+  "packageManager": "npm@11.6.2",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "develop": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "serve": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "deploy": "netlify deploy --prod --dir=public",
+    "format": "prettier --write \"**/*.{astro,js,json,md,scss}\"",
+    "test": "npm run build"
   },
   "dependencies": {
-    "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
-    "@theme-ui/color": "^0.17.4",
-    "decap-cms-app": "^3.6.1",
-    "gatsby": "^5.16.1",
-    "gatsby-plugin-decap-cms": "^4.0.4",
-    "gatsby-plugin-google-analytics": "^5.16.0",
-    "gatsby-plugin-image": "^3.16.0",
-    "gatsby-plugin-manifest": "^5.16.0",
-    "gatsby-plugin-netlify": "^5.1.1",
-    "gatsby-plugin-netlify-cms-paths": "^1.3.0",
-    "gatsby-plugin-offline": "^6.16.0",
-    "gatsby-plugin-react-helmet": "^6.16.0",
-    "gatsby-plugin-sass": "^6.16.0",
-    "gatsby-plugin-sharp": "^5.16.0",
-    "gatsby-plugin-sitemap": "^6.16.0",
-    "gatsby-plugin-theme-ui": "^0.17.4",
-    "gatsby-remark-images": "^7.16.0",
-    "gatsby-remark-prismjs": "^7.16.0",
-    "gatsby-remark-responsive-iframe": "^6.16.0",
-    "gatsby-source-filesystem": "^5.16.0",
-    "gatsby-transformer-remark": "^6.16.0",
-    "gatsby-transformer-sharp": "^5.16.0",
-    "prismjs": "^1.30.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^5.6.0",
-    "sass": "^1.98.0",
-    "theme-ui": "^0.17.4"
+    "astro": "^6.1.8",
+    "sass": "^1.98.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^25.1.1"
   }
 }

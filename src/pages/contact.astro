@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const pageModules = import.meta.glob("../content/pages/contact.md", { eager: true })
+const page = Object.values(pageModules)[0]
+const contact = page.frontmatter
+---
+
+<Layout title={contact.title} description={contact.description}>
+  <section class="contact-page">
+    <div class="meta-text">{contact.label}</div>
+    <h1>{contact.title}</h1>
+    <p class="contact-page__description">{contact.description}</p>
+    <form
+      class="contact-form"
+      action="/thanks"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden">
+        <label>
+          Do not fill this out
+          <input name="bot-field" />
+        </label>
+      </p>
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        <span>Subject</span>
+        <input type="text" name="subject" required />
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button class="foundry-button foundry-button--primary" type="submit">
+        Send message
+      </button>
+    </form>
+  </section>
+</Layout>

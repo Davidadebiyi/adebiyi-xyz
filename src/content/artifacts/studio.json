@@ -1,0 +1,40 @@
+{
+  "title": "Studio",
+  "navTitle": "Studio",
+  "tagline": "Expression · Communication · Editorial · Presentation",
+  "description": "Design systems, specifications, slide decks, and editorial artifacts.",
+  "items": [
+    {
+      "id": "Spec. 02",
+      "type": "Specification",
+      "title": "Foundry - design system v2",
+      "summary": "Oxide-informed, brutalist, grid-first. An operating system for expression across web, decks, and documents.",
+      "tags": ["Design", "System"],
+      "date": "2026-04-10"
+    },
+    {
+      "id": "Note. 08",
+      "type": "Essay",
+      "title": "On editorial discipline in design systems",
+      "summary": "Why editorial thinking, not marketing, is the correct model for personal design infrastructure.",
+      "tags": ["Essay", "Editorial"],
+      "date": "2026-03-30"
+    },
+    {
+      "id": "Spec. 03",
+      "type": "Slide deck",
+      "title": "Hankali AI - investor brief",
+      "summary": "Architecture, traction, and positioning for Hankali AI. Built on the Foundry deck master theme.",
+      "tags": ["Slides", "Hankali"],
+      "date": "2026-02-22"
+    },
+    {
+      "id": "Fig. 09",
+      "type": "Diagram",
+      "title": "Figure numbering protocol",
+      "summary": "Every significant object as a referable artifact: Fig. / Note. / Spec. / Build. / Tbl. conventions.",
+      "tags": ["Figures", "Reference"],
+      "date": "2026-01-14"
+    }
+  ]
+}

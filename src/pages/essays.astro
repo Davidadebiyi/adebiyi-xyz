@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro"
+import EssayGrid from "../components/EssayGrid.astro"
+import PageHeader from "../components/PageHeader.astro"
+import { sortPostsByDate } from "../util/foundry-data"
+
+const postModules = import.meta.glob("../content/posts/*.md", { eager: true })
+const posts = sortPostsByDate(Object.values(postModules))
+---
+
+<Layout title="Essays" description="Notes, year-end records, and long-form thinking.">
+  <div class="essays-page">
+    <PageHeader
+      label="Writing · Studio"
+      title="Essays"
+      description="Notes, year-end records, and long-form thinking."
+    />
+    <EssayGrid posts={posts} />
+  </div>
+</Layout>

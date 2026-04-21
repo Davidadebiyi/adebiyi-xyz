@@ -1,0 +1,22 @@
+---
+import TagList from "./TagList.astro"
+
+const { items = [] } = Astro.props
+---
+
+<div class="artifact-grid">
+  {
+    items.map(item => (
+      <article class="artifact-card">
+        <div class="artifact-card__meta">
+          <span class="artifact-card__id">{item.id}</span>
+          <span>{item.type}</span>
+          <time datetime={item.date}>{item.date}</time>
+        </div>
+        <h2>{item.title}</h2>
+        <p>{item.summary}</p>
+        <TagList tags={item.tags} />
+      </article>
+    ))
+  }
+</div>

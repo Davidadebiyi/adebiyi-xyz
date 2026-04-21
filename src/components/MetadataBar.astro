@@ -1,0 +1,16 @@
+---
+const { items, boxed = false } = Astro.props
+const className = boxed ? "metadata-strip" : "metadata-bar"
+const itemClass = boxed ? "metadata-strip__item" : "metadata-bar__item"
+---
+
+<div class={className}>
+  {
+    items.map(item => (
+      <div class={itemClass}>
+        <span>{item.label}</span>
+        <strong>{item.value}</strong>
+      </div>
+    ))
+  }
+</div>

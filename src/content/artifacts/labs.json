@@ -1,0 +1,56 @@
+{
+  "title": "Labs",
+  "navTitle": "Labs",
+  "tagline": "Inquiry · Systems · Research · Technical investigation",
+  "description": "Field notes, system diagrams, and research records from work at the intersection of ML and embedded systems.",
+  "items": [
+    {
+      "id": "Sys. 01",
+      "type": "System",
+      "title": "Grid-first layout architecture",
+      "summary": "12-column desktop system with 8px base unit. Panels, regions, and fields as first-class objects.",
+      "tags": ["Grid", "Layout"],
+      "date": "2026-04-21"
+    },
+    {
+      "id": "Note. 03",
+      "type": "Research note",
+      "title": "Oxide-informed color theory",
+      "summary": "How engineering restraint shapes a color system: monochrome first, accent as signal only.",
+      "tags": ["Color", "Theory"],
+      "date": "2026-03-14"
+    },
+    {
+      "id": "Sys. 02",
+      "type": "System",
+      "title": "TinyML pipeline - edge inference",
+      "summary": "On-device inference architecture for microcontrollers. Quantization, power budgets, OTA updates.",
+      "tags": ["ML", "Embedded"],
+      "date": "2026-02-10"
+    },
+    {
+      "id": "Note. 05",
+      "type": "Research note",
+      "title": "Utility infrastructure and digital transformation",
+      "summary": "Field notes from leading hardware engineering teams building electricity retail systems in Nigeria.",
+      "tags": ["Infrastructure", "Nigeria"],
+      "date": "2025-11-30"
+    },
+    {
+      "id": "Sys. 03",
+      "type": "System",
+      "title": "Type role taxonomy",
+      "summary": "Three-role typography: sans for structure, serif for authority, mono for technical texture.",
+      "tags": ["Typography"],
+      "date": "2025-10-05"
+    },
+    {
+      "id": "Note. 07",
+      "type": "Observation",
+      "title": "Embedded video analytics - lessons learned",
+      "summary": "What breaks in production that never breaks in the lab. Notes from robotics and video analytics deployments.",
+      "tags": ["Robotics", "Video"],
+      "date": "2025-08-18"
+    }
+  ]
+}

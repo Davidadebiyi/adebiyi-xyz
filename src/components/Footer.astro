@@ -1,0 +1,19 @@
+---
+const footerLinks = [
+  { href: "/labs", label: "Labs" },
+  { href: "/studio", label: "Studio" },
+  { href: "/workshop", label: "Workshop" },
+  { href: "/essays", label: "Essays" },
+  { href: "/index", label: "Index" },
+  { href: "/bio", label: "Bio" },
+  { href: "/contact", label: "Contact" },
+]
+---
+
+<footer class="site-footer">
+  <a href="/" class="site-footer__wordmark">Adebiyi</a>
+  <p>Made by David Adebiyi · © 2021</p>
+  <nav class="site-footer__links" aria-label="Footer navigation">
+    {footerLinks.map(link => <a href={link.href}>{link.label}</a>)}
+  </nav>
+</footer>

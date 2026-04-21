@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro"
+import MetadataBar from "../components/MetadataBar.astro"
+
+const pageModules = import.meta.glob("../content/pages/bio.md", { eager: true })
+const page = Object.values(pageModules)[0]
+const bio = page.frontmatter
+const { Content } = page
+---
+
+<Layout title={bio.title} description="Personal biography for David Adebiyi.">
+  <article class="bio-page">
+    <div class="meta-text">{bio.label}</div>
+    <h1>{bio.title}</h1>
+    <blockquote>
+      {bio.quote}
+    </blockquote>
+    <MetadataBar items={bio.metadata} />
+    <div class="bio-page__body">
+      <Content />
+    </div>
+    <figure class="foundry-figure">
+      <figcaption>{bio.figure.label}</figcaption>
+      <img src={bio.figure.image} alt={bio.figure.alt} />
+      <p>{bio.figure.caption}</p>
+    </figure>
+  </article>
+</Layout>
