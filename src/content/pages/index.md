@@ -3,7 +3,8 @@ title: David Adebiyi
 eyebrow: adebiyi.xyz · Multi-Stack Engineer
 subtitle: Forward/Reverse Engineer. Building PowerLabs.
 description: "I work at the intersection of machine learning and embedded
-  systems: building products, infrastructure, and tooling. "
+  systems: building products, infrastructure, and tooling. Currently working on
+  Software Defined Electricity."
 portraitImage: /assets/dave.jpg
 portraitCaption: David Adebiyi · Lagos, NG
 primaryCta:
@@ -20,7 +21,7 @@ metadata:
   - label: Domain
     value: ML · Embedded
   - label: Mode
-    value: Engineer
+    value: Engineer · Entrepreneur · Researcher
 modes:
   - id: "01"
     title: Labs
