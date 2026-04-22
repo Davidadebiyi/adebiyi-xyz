@@ -1,8 +1,9 @@
 ---
 title: David Adebiyi
 eyebrow: adebiyi.xyz · Multi-Stack Engineer
-subtitle: Forward/Reverse Engineer. Building Hankali AI.
-description: "I work at the intersection of machine learning and embedded systems: building products, infrastructure, and tools. Labs · Studio · Workshop."
+subtitle: Forward/Reverse Engineer. Building PowerLabs.
+description: "I work at the intersection of machine learning and embedded
+  systems: building products, infrastructure, and tooling. "
 portraitImage: /assets/dave.jpg
 portraitCaption: David Adebiyi · Lagos, NG
 primaryCta:
@@ -13,8 +14,6 @@ secondaryCta:
   url: /essays
 metadata:
   - label: Building
-    value: Hankali AI
-  - label: Also
     value: PowerLabs
   - label: Community
     value: TinyML Nigeria
